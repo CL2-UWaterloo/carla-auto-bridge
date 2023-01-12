@@ -1,0 +1,6 @@
+<launch>
+    <node pkg="autoware_bridge" exec="carla_vehicle_interface_node" name="carla_vehicle_interface"/>
+    <node pkg="topic_tools" exec="relay" name="carla_to_autoware_pointcloud" args="/carla/ego_vehicle/lidar /sensing/lidar/concatenated/pointcloud"/>
+    <node pkg="topic_tools" exec="relay" name="carla_to_autoware_imu" args="/carla/ego_vehicle/imu /sensing/imu/imu_data"/>
+    <node pkg="tf2_ros" exec="static_transform_publisher" name="ego_vehicle2base_link" args=" 0 0 0 0 0 0 /base_link /ego_vehicle "/>
+</launch>
