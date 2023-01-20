@@ -23,6 +23,11 @@
   cd ros2_ws/src
   git clone git@github.com:CL2-UWaterloo/carla-auto-bridge.git --recursive
   ```
+4) Download CARLA maps (https://bitbucket.org/carla-simulator/autoware-contents/src/master/maps/), name accordingly
+```
+point_cloud/Town01.pcd -> Town01/pointcloud_map.pcd
+vector_maps/lanelet2/Town01.osm -> Town01/lanelet2_map.osm
+```
 ## Build
 ```bash
 cd ros2_ws
